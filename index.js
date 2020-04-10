@@ -1,5 +1,10 @@
+"use strict";
+
 let form = document.getElementById('form');
 form.addEventListener('submit', getWeather);
+
+let addToFavorites = document.getElementById('placeCheckbox');
+addToFavorites.addEventListener('checked', makeFavorite);
 
 async function getWeather(event){
     event.preventDefault();
@@ -20,7 +25,7 @@ async function getWeather(event){
 
     let htmlString1 = `<h2>Weather:</h2>
     <ul>
-      <li>Place: ${data.name}</li>
+      <input type="checkbox" name="place" id="placeCheckbox"> ${data.name}
       <li>Temperature: ${data.main.temp}</li>
       <li>Description: ${data.weather[0].description}</li>
     </ul>
@@ -36,4 +41,10 @@ async function getWeather(event){
   console.log('htmlString2', htmlString2);
         let listHtml2 = document.getElementById('favorites')
         listHtml2.innerHTML = htmlString2;
+}
+
+function makeFavorite(){
+  console.log('make favorite begins');
+  htmlString2 + htmlString1 == htmlString2;
+  
 }
