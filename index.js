@@ -3,9 +3,6 @@
 let form = document.getElementById('form');
 form.addEventListener('submit', getWeather);
 
-let addToFavorites = document.getElementById('placeCheckbox');
-addToFavorites.addEventListener('checked', makeFavorite);
-
 async function getWeather(event){
     event.preventDefault();
     console.log('Form submit event');
@@ -25,26 +22,26 @@ async function getWeather(event){
 
     let htmlString1 = `<h2>Weather:</h2>
     <ul>
-      <input type="checkbox" name="place" id="placeCheckbox"> ${data.name}
+     <h3>Place: ${data.name}</h3>
       <li>Temperature: ${data.main.temp}</li>
       <li>Description: ${data.weather[0].description}</li>
     </ul>
     `;
-
-    let htmlString2 = `<h2>Favorites:</h2>`;
 
 
   //Inject into HTML
   console.log('htmlString1', htmlString1);
         let listHtml = document.getElementById('weatherResult');
         listHtml.innerHTML= htmlString1;
-  console.log('htmlString2', htmlString2);
-        let listHtml2 = document.getElementById('favorites')
-        listHtml2.innerHTML = htmlString2;
 }
+
+let formFavorites = document.getElementById('savedList');
+savedList.addEventListener('submit', makeFavorite);
 
 function makeFavorite(){
   console.log('make favorite begins');
-  htmlString2 + htmlString1 == htmlString2;
+  let empty = document.getElementById('favorites').innerHTML;
+  let change = str.replace("no favorites yet", "htmlString1");
+  document.getElementById('favorites').innerHTML = change;
   
 }
