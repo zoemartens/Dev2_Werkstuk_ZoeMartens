@@ -20,8 +20,8 @@ async function getWeather(event){
     console.log(data.main.temp);
     console.log(data.weather[0].description);
 
-    let htmlString1 = `<h2>Weather:</h2>
-    <ul>
+    let htmlString1 = 
+    `<ul>
      <h3>Place: ${data.name}</h3>
       <li>Temperature: ${data.main.temp}</li>
       <li>Description: ${data.weather[0].description}</li>
@@ -33,15 +33,18 @@ async function getWeather(event){
   console.log('htmlString1', htmlString1);
         let listHtml = document.getElementById('weatherResult');
         listHtml.innerHTML= htmlString1;
-}
 
 let formFavorites = document.getElementById('savedList');
 savedList.addEventListener('submit', makeFavorite);
 
-function makeFavorite(){
+async function makeFavorite(event){
+  event.preventDefault();
   console.log('make favorite begins');
-  let empty = document.getElementById('favorites').innerHTML;
-  let change = str.replace("no favorites yet", "htmlString1");
-  document.getElementById('favorites').innerHTML = change;
+  let empty = document.getElementById('favoritesResult').innerHTML;
+  let change = empty.replace("add to favorites", htmlString1);
+  document.getElementById('favoritesResult').innerHTML = change;
   
+  
+  }
+
 }
