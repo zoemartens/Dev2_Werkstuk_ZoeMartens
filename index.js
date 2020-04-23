@@ -40,11 +40,10 @@ savedList.addEventListener('submit', makeFavorite);
 async function makeFavorite(event){
   event.preventDefault();
   console.log('make favorite begins');
-  let empty = document.getElementById('favoritesResult').innerHTML;
-  let change = empty.replace("add to favorites", htmlString1);
-  document.getElementById('favoritesResult').innerHTML = change;
-  
-  
+  let htmlString2 = document.getElementById('favoritesResult').innerHTML += htmlString1;
+
+
   }
+
 
 }
