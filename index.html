@@ -1,28 +1,45 @@
 <!DOCTYPE html>
     <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="index.js"></script>
   <head>
     <title>Werkstuk</title>
     </head>
   <body>
-    <h1>City weather</h1>
+    <h1>To Rain Or Not To Rain?</h1>
     <form id="form">
       <label for="search">
-        City name
+        Find place here:
       </label>
       <input type="search" id="search" />
-      <input type="submit" value="Get weather" />
+      <button class="search">Get weather</button>
     </form>
     <div id="weatherResult">
     </div>
     <form id="savedList">
     <div id="favorites">
       <h2>Favorites:</h2>
-      <input type="submit" value="Save to favorites" />
+      <input type="submit" id="favoriteButton" value="Save to favorites" />
     </div>
   </form>
   <div id="favoritesResult">
   </div>
-    <script type="module" src="index.js"></script>
+  
+  <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_temp_converter_celsius_to_fahrenheit-->
+  <!--GEEN EIGEN CODE-->
+  <h3>Temperature Converter</h3>
+<p>Schrijf hier de temperatuur in graden Celcius om de temperatuur in Fahrenheit te weten:</p>
+<p>
+  <label>Celsius</label>
+  <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+<script>
+  function temperatureConverter(valNum) {
+    valNum = parseFloat(valNum);
+    document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+  }
+  </script>
   </body>
 </html>
