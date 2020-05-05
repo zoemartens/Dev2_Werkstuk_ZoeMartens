@@ -1,20 +1,84 @@
+@font-face{
+  font-family: 'Quicksand', sans-serif;
+  src: url(https://fonts.googleapis.com/css2?family=Quicksand&display=swap);
+  font-family: 'Amatic SC', cursive;
+  src: url(https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap);
+}
+
 h1 {
   text-decoration: underline;
   text-decoration-color: #F2BA49;
+  font-family: 'Quicksand';
+  text-align: center;
 }
 
-h2{
+p{
   display: inline;
+  font-size: 26px;
+  color: #4D90D1;
+  font-family: 'Amatic SC';
+}
+
+#cToF, #converter, #fahrenheit{
+  font-family: 'Quicksand';
 }
 
 .search{
   background-color: white;
   border: 3px solid #F2BA49;
-  width: 200px;
-  height: 75px;
+  width: 150px;
+  height: 40px;
   border-radius: 10px;
-  font-size: 30px;
+  font-size: 15px;
 }
+
+#search{
+  width: 150px;
+  height: 40px;
+  font-size: 15px;
+}
+
+.favoriteButton{
+  background-color: white;
+  border: 3px solid #F2BA49;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+h3{
+  text-decoration: underline;
+  text-decoration-color: #F2BA49;
+}
+
+.weather-image{
+  max-height: 100px;
+  max-width: 100%;
+  overflow: hidden;
+  margin-bottom: 5%;
+}
+
+.weather-image img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#form, #savedList, #temperatureConverter, #cToF, #converter, #fahrenheit{
+  margin-left: 6%;
+  margin-top: 5%;
+}
+
+#weatherResult, #favoritesResult{
+  font-family: 'Quicksand';
+  font-size: 15px;
+}
+
+button{
+  font-family: 'Quicksand';
+}
+
 
 /* The switch - the box around the slider */
 .switch {
@@ -78,3 +142,4 @@ h2{
   .slider.round:before {
     border-radius: 50%;
   }
+

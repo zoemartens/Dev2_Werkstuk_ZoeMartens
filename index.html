@@ -8,9 +8,12 @@
     </head>
   <body>
     <h1>To Rain Or Not To Rain?</h1>
+    <div class="weather-image">
+      <img src="IMAGES/weatherbanner3.png" alt="different weathers">
+    </div>
     <form id="form">
       <label for="search">
-        Find place here:
+        <p>Find place here:</p>
       </label>
       <input type="search" id="search" />
       <button class="search">Get weather</button>
@@ -19,8 +22,8 @@
     </div>
     <form id="savedList">
     <div id="favorites">
-      <h2>Favorites:</h2>
-      <input type="submit" id="favoriteButton" value="Save to favorites" />
+      <p>Favorites:</p>
+      <button class="favoriteButton">Save to favorites</button>
     </div>
   </form>
   <div id="favoritesResult">
@@ -28,18 +31,27 @@
   
   <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_temp_converter_celsius_to_fahrenheit-->
   <!--GEEN EIGEN CODE-->
-  <h3>Temperature Converter</h3>
-<p>Schrijf hier de temperatuur in graden Celcius om de temperatuur in Fahrenheit te weten:</p>
-<p>
+  <div id="temperatureConverter">
+    <p>Temperature Converter:</p>
+  </div>
+  <div id="cToF">
+    <p1>Schrijf hier de temperatuur in graden Celcius om de temperatuur in Fahrenheit te weten:</p1>
+  </div>
+  <div id="converter">
+<p2>
   <label>Celsius</label>
   <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
-</p>
-<p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+</p2>
+</div>
+<div id="fahrenheit">
+<p2>Fahrenheit: <span id="outputFahrenheit"></span></p2>
+</div>
 <script>
   function temperatureConverter(valNum) {
     valNum = parseFloat(valNum);
     document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
   }
   </script>
+
   </body>
 </html>

@@ -67,12 +67,14 @@ async function getWeather(event){
 let formFavorites = document.getElementById('savedList');
 savedList.addEventListener('submit', makeFavorite);
 
+let htmlString2 = [];
+
+htmlString2.forEach(makeFavorite);
+
 function makeFavorite(event){
   event.preventDefault();
   console.log('make favorite begins');
-  let htmlString2 = document.getElementById('favoritesResult').innerHTML += htmlString1;
-
-
+  htmlString2 = document.getElementById('favoritesResult').innerHTML += htmlString1;
       }
       
     }
