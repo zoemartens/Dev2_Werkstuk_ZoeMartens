@@ -5,16 +5,28 @@
   src: url(https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap);
 }
 
+body{
+  background-image: linear-gradient(rgba(77, 143, 209, 0.5) , rgba(242, 186, 73, 0.5));
+}
+
+.gif img{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-left: 5px;
+}
+
 h1 {
   text-decoration: underline;
   text-decoration-color: #F2BA49;
   font-family: 'Quicksand';
   text-align: center;
+  font-size: 50px;
 }
 
 p{
   display: inline;
-  font-size: 26px;
+  font-size: 35px;
   color: #4D90D1;
   font-family: 'Amatic SC';
 }
@@ -23,27 +35,23 @@ p{
   font-family: 'Quicksand';
 }
 
-.search{
+#fahrenheit{
+  margin-bottom: 50%;
+}
+
+.search, .favoriteButton{
   background-color: white;
   border: 3px solid #F2BA49;
-  width: 150px;
-  height: 40px;
+  width: 200px;
+  height: 60px;
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 23px;
+  font-family: 'Quicksand';
 }
 
 #search{
   width: 150px;
-  height: 40px;
-  font-size: 15px;
-}
-
-.favoriteButton{
-  background-color: white;
-  border: 3px solid #F2BA49;
-  width: 150px;
-  height: 40px;
-  border-radius: 10px;
+  height: 70px;
   font-size: 15px;
 }
 
@@ -52,11 +60,19 @@ h3{
   text-decoration-color: #F2BA49;
 }
 
+#weatherResult ul, #favoritesResult ul, #cToF, #converter, #fahrenheit{
+  list-style-type: none;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Quicksand';
+}
+
 .weather-image{
   max-height: 100px;
   max-width: 100%;
   overflow: hidden;
   margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 .weather-image img{
@@ -66,17 +82,8 @@ h3{
 }
 
 #form, #savedList, #temperatureConverter, #cToF, #converter, #fahrenheit{
-  margin-left: 6%;
+  text-align: center;
   margin-top: 5%;
-}
-
-#weatherResult, #favoritesResult{
-  font-family: 'Quicksand';
-  font-size: 15px;
-}
-
-button{
-  font-family: 'Quicksand';
 }
 
 
@@ -143,3 +150,57 @@ button{
     border-radius: 50%;
   }
 
+  @media screen and (max-width: 768px){
+    h1{
+      font-size: 30px;
+    }
+    
+    p{
+      font-size: 27px;
+    }
+
+    .search, .favoriteButton{
+      border: 2px solid #F2BA49;
+      width: 170px;
+      height: 50px;
+      font-size: 18px;
+    }
+
+    #weatherResult ul, #favoritesResult ul, #cToF, #converter, #fahrenheit{
+      list-style-type: none;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .gif img{
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    h1{
+      font-size: 23px;
+    }
+
+    #weatherResult ul, #favoritesResult ul, #cToF, #converter, #fahrenheit{
+      list-style-type: circle;
+      text-align: left;
+      font-size: 15px;
+      margin-left: 7%;
+    }
+
+    .search, .favoriteButton{
+      border: 2px solid #F2BA49;
+      width: 150px;
+      height: 40px;
+      font-size: 15px;
+    }
+
+    .gif img{
+      width: 50px;
+      height: 50px;
+      margin-left: 10%;
+    }
+
+  }

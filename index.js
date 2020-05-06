@@ -67,7 +67,8 @@ async function getWeather(event){
 let formFavorites = document.getElementById('savedList');
 savedList.addEventListener('submit', makeFavorite);
 
-let htmlString2 = [];
+
+let htmlString2 = new makeFavorite;
 
 htmlString2.forEach(makeFavorite);
 
