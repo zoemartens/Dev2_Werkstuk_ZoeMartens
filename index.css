@@ -35,15 +35,12 @@ p{
   font-family: 'Quicksand';
 }
 
-#fahrenheit{
-  margin-bottom: 50%;
-}
 
 .search, .favoriteButton{
   background-color: white;
   border: 3px solid #F2BA49;
   width: 200px;
-  height: 60px;
+  height: 50px;
   border-radius: 10px;
   font-size: 23px;
   font-family: 'Quicksand';
@@ -79,6 +76,7 @@ h3{
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 #form, #savedList, #temperatureConverter, #cToF, #converter, #fahrenheit{
@@ -86,7 +84,17 @@ h3{
   margin-top: 5%;
 }
 
+#end-note{
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #4D90D1;
+  font-family: 'Quicksand';
+  font-size: 23px;
+  color: black;
+  margin-top: 10%;
+}
 
+/*GEEN EIGEN CSS CODE*/
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -149,7 +157,9 @@ h3{
   .slider.round:before {
     border-radius: 50%;
   }
+  /*EINDE GEEN EIGEN CSS CODE*/
 
+/*MEDIA QUERY*/
   @media screen and (max-width: 768px){
     h1{
       font-size: 30px;
@@ -176,6 +186,10 @@ h3{
       width: 70px;
       height: 70px;
     }
+
+    #fahrenheit{
+      margin-bottom: 22%;
+    }
   }
 
   @media screen and (max-width: 600px){
@@ -200,7 +214,11 @@ h3{
     .gif img{
       width: 50px;
       height: 50px;
-      margin-left: 10%;
+      margin-left: 3%;
+    }
+
+    #fahrenheit{
+      margin-bottom: 40%;
     }
 
   }

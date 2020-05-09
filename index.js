@@ -84,3 +84,4 @@ function makeFavorite(event){
 }
 
 renderPlace();
+
